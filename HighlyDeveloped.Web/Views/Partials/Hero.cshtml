@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Core.PropertyEditors.ValueConverters
+      @{
+      var Colour = "#" + Model.Value<ColorPickerValueConverter.PickedColor>("backgroundColor");
+      var Label = Model.Value<ColorPickerValueConverter.PickedColor>("backgroundColor").Label;
+      }
+
+
+
+
+<div class="jumbotron jumbotron-fluid bg-@Label text-light">
+  <div class="container">
+    <h1 class="display-4">@Model.Value("heroTitle")</h1>
+    <p class="lead">@Model.Value("heroText")</p>
+  </div>
+</div>

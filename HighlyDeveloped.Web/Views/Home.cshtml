@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+@{
+	Layout = "main.cshtml";
+}
+
+
+@Html.Partial("Hero")
+@Html.Partial("Call to Action")
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            @Html.Partial("Latest News")
+        </div>
+    </div>
+</div>
+
+
+
+
